@@ -13,16 +13,28 @@ Once you have Python installed, you can clone this repository using the followin
 git clone https://github.com/canbekcan/GoogleSearch.git
 ```
 
-This Python code allows to record Google search
+GoogleSearchResults-API code allows to record Google search with API and save results to CSV file.
+
 
 ## Packages
 ```bash
-pip install httpx parsel time csv
+pip install httpx parsel time csv google-api-python-client python-dotenv
 ```
 ## Environment
 ```bash
 python -m venv myevn
 ```
+
+## Google Custom Search API Setup  🔧
+To use the Google Custom Search API, you'll need to set up a project in the Google Cloud Console and enable the Custom Search API. Follow these steps:
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Create a new project.
+3. Navigate to the "APIs & Services" dashboard and click on "Enable APIs and Services."
+4. Search for "Custom Search API" and enable it for your project.
+5. Go to the "Credentials" tab and create an API key. This key will be used to authenticate your requests to the API.
+6. Set up a Custom Search Engine (CSE) by going to the [Custom Search Engine](https://cse.google.com/cse/) page.
+7. Create a new search engine and configure it to search the entire web or specific sites.
+8. Note down the Search Engine ID (CX) from the CSE control panel.
 
 ## Data Analysis 📈
 

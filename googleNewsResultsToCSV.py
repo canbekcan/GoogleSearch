@@ -4,7 +4,8 @@ import csv
 from datetime import datetime
 
 # Define the base URL for Google News
-BASE_URL = "https://news.google.com/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+# BASE_URL = "https://news.google.com/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+BASE_URL = "https://news.google.com/search?q={query}&hl=tr&gl=TR&ceid=TR:tr"
 
 # Define the search query
 SEARCH_QUERY = input("Search terms: ")

@@ -3,6 +3,8 @@ from parsel import Selector
 import time
 import csv
 
+
+googleSearchApi = ""  # Replace with your actual API key
 # Headers to mimic browser-like behavior
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
@@ -58,13 +60,14 @@ with open(csv_filename, mode='w', newline='', encoding='utf-8') as file:
         print('--------------------------')
 
         # Loop through each search result and extract the title, link, and snippet
-        for result in selector.css('div.g'):
+        for result in selector.css('div.tF2Cxc'):
             # Extract title
-            title = result.css('h3::text').get()
+            title = result.css('h3.LC20lb::text').get()
             # Extract the link
-            link = result.css('a::attr(href)').get()
-            # Extract the snippet text
-            snippet = result.css('div.VwiC3b::text, span.aCOpRe::text').get()
+            link = result.css('div.yuRUbf a::attr(href)').get()
+            # Extract the snippet text - get all text nodes and join them
+            snippet_parts = result.css('div.VwiC3b *::text').getall()
+            snippet = ' '.join(snippet_parts).strip() if snippet_parts else None
 
             # Check if both title and link exist
             if title and link:

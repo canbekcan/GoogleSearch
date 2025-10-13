@@ -1,0 +1,11 @@
+# .env dosyası gizli API anahtarlarını içerir, ASLA commit edilmemelidir.
+.env
+
+# Python derleme ve bağımlılık dosyaları
+pycache/
+*.pyc
+venv/
+.pytest_cache/
+
+# İşletim sistemi dosyaları
+.DS_Store
