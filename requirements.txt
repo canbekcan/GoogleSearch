@@ -1,5 +1,8 @@
 httpx
 parsel
+os
 time
 csv
 scrapy
+google-api-python-client
+python-dotenv
