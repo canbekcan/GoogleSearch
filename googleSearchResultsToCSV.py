@@ -1,3 +1,5 @@
+# This version does not work anymore due to Google search page structure changes.
+
 import httpx
 from parsel import Selector
 import time

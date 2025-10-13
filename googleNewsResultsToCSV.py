@@ -1,5 +1,3 @@
-# This version does not work anymore due to Google Search page structure changes.
-
 import requests
 from parsel import Selector
 import csv
